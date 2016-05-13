@@ -1,5 +1,12 @@
 local Plugin = {}
 
+--[[
+Plugin.Conflicts = {
+    DisableThem = { },
+    DisableUs = { "afkkick" }
+}
+--]]
+
 if Server then
     Shine:RegisterExtension( "shortbreak", Plugin, 
 	{ 
