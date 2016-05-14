@@ -37,10 +37,14 @@ end
 function Plugin:PostJoinTeam( Gamerules, Player, OldTeam, NewTeam, Force, ShineForce )
 	--kSpectatorIndex
 	--if(NewTeam == kTeam1Index or NewTeam == kTeam2Index or NewTeam == kTeamReadyRoom) then
-		local uniqueID=string.format("shortBreak_reset_count%d",Player:GetClient():GetUserId())
+	local Client = Player:GetClient()
+		local uniqueID=string.format("shortBreak_reset_count%d",Client:GetUserId())
 		if(Shine.Timer.Exists( uniqueID )) then
 			Shine.Timer.Destroy( uniqueID )
 			Shine:NotifyColour( Client, 0, 255, 0, "Short Break end")
+			local Data = Plugin.Users[ Client ]
+			if not Data then return end
+			Data.IsShortBreak=false
 		end
 	--end
 end
@@ -53,7 +57,7 @@ do
 	end
 	
 	local function GetNameBreak( self )
-		return "ShortBreak - "..OldFunc( self )
+		return "ShortBreak- "..OldFunc( self )
 	end
 
 	function Plugin:PrePlayerInfoUpdate( PlayerInfo, Player )
@@ -81,5 +85,6 @@ do
 		OldFunc = nil
 		end
 	--]]
+	
 end
 
