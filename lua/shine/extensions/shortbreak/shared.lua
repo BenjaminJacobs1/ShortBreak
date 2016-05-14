@@ -1,13 +1,12 @@
 local Plugin = {}
 
---[[
-Plugin.Conflicts = {
-    DisableThem = { },
-    DisableUs = { "afkkick" }
-}
---]]
-
 if Server then
+	Plugin.Conflicts = {
+		DisableThem = { },
+		DisableUs = { "afkkick" }
+	}
+
+
     Shine:RegisterExtension( "shortbreak", Plugin, 
 	{ 
 	Base = "afkkick",
@@ -16,6 +15,7 @@ if Server then
 		--PostPlayerInfoUpdate = true
     }
 	} )
+	
 else
     Shine:RegisterExtension( "shortbreak", Plugin )
 end

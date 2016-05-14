@@ -6,7 +6,7 @@ local timersShortbreak={}
 
 function Plugin:ReceiveITakeAShortBreak( Client, Data )
 		local uniqueID=string.format("shortBreak_reset_count%d",Client:GetUserId())
-		Print("checking timer %s, ",uniqueID)
+		--Print("checking timer %s, ",uniqueID)
 		if not Shine.Timer.Exists( uniqueID ) then
 
 			local Data = Plugin.Users[ Client ]

@@ -13,8 +13,9 @@ This plugin require Shine mod enabled on the server to be able to run.
 You also need to add the plugin in your shine/BaseConfig.json, 
 under the "ActiveExtensions" add: "shortbreak":true
 
-!!! because the plugin inherit from the default afkkick plugin, you need to disable it in your shine/BaseConfig.json
-!!! "ActiveExtensions" set: "afkkick":false else the plugins will enter in conflict and the sever could crash.
+!!!Because the plugin inherit from the default afkkick plugin, 
+!!!you need to disable it in your shine/BaseConfig.json (or via the shine adminmenu)
+!!! "ActiveExtensions" set: "afkkick":false else the plugin will remain disabled.
 
 The plugin use the afkkick.json configuration file.
 
@@ -25,11 +26,11 @@ The plugin is available in github: https://github.com/BenjaminJacobs1/ShortBreak
 TODO list:
 -	Add translations
 -	Add configurations options to change the afktime
--	Find a way to unload the plugin if afkkick is enabled to avoid conflict and potential server crash.
 	
 
 Version:
 0.1: First version
+0.2: Fix conflict problem with afkkick.
 
 ]=]
 image       = "preview.jpg"
