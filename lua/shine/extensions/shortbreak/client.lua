@@ -3,7 +3,7 @@ local Plugin = Plugin
 function Plugin:Initialise()
 
 	Shine.VoteMenu:AddPage( "ShortBreakPage", function( self )
-		Shine.VoteMenu:AddTopButton( "confirm&join readyroom", nil )
+		Shine.VoteMenu:AddTopButton( "confirm&join spectator", nil )
 		
 		self:AddSideButton( "Yes, I take a break", function()
 		Plugin:SendNetworkMessage( "ITakeAShortBreak", { }, true )

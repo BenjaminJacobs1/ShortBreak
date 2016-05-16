@@ -3,7 +3,7 @@
 This plugin add a button to allow players to take a "short break" and
 to be immune for a maximum of 5 minutes from afkkick plugin.
 
-When you click on the button you are put into the readyroom.
+When you click on the button you are put into spectator team.
 When you join a team after your break the immunity is revoked.
 
 This plugin require Shine mod enabled on the server to be able to run.
@@ -19,6 +19,12 @@ The plugin use the afkkick.json configuration file.
 This Plugin is under development,
 Please report any issue.
 The plugin is available in github: https://github.com/BenjaminJacobs1/ShortBreak
+If you are looking for documentation about shine in general, take a look here:
+https://github.com/Person8880/Shine/wiki
+
+Recommandation:
+People taking a break should be immune to shuffle, thus you should edit the VoteRandom.json
+and set  "IgnoreSpectators" to true.
 
 TODO list:
 -	Add translations

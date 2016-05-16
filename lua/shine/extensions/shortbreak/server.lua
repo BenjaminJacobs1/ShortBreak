@@ -17,7 +17,7 @@ function Plugin:ReceiveITakeAShortBreak( Client, Data )
 			if not Gamerules then return end
 			local Player = Client:GetControllingPlayer()
 			if Player then
-				Gamerules:JoinTeam( Player, kTeamReadyRoom, nil, true )
+				Gamerules:JoinTeam( Player, kSpectatorIndex, nil, true )
 			end
 			
 			Shine:NotifyColour( Client, 0, 255, 0, "you can now take a break of maximum 5 mins")
